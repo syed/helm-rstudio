@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: rstudio-pvc
+  name: {{ include "rstudio.fullname" . }}-pvc
 spec:
   storageClassName: rstudio-data
   accessModes:
@@ -9,4 +9,5 @@ spec:
   resources:
     requests:
       storage: {{ .Values.storage.nfs.size }}
-  volumeName: rstudio-volume
+  volumeName: {{ include "rstudio.fullname" . }}-volume
+

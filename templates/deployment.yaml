@@ -36,4 +36,4 @@ spec:
       volumes:
         - name: data-vol
           persistentVolumeClaim:
-            claimName: rstudio-pvc
+            claimName: {{ include "rstudio.fullname" . }}-pvc

@@ -3,12 +3,12 @@ entries:
   rstudio:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-02-07T13:26:08.584591251-05:00
+    created: 2019-02-07T13:47:15.90877871-05:00
     description: RStudio helm chart with an NFS volume attached which contains the
       data
-    digest: 14e8cf5cbe985f4441b34544546f849fc3926cbf07cb8c877023cd109ba1a48a
+    digest: 2d3e0892a599f76dbab8694506aae507e5822b298eae2ac27f2d13b5da3af256
     name: rstudio
     urls:
     - https://syed.github.io/helm-rstudio/rstudio-0.1.0.tgz
     version: 0.1.0
-generated: 2019-02-07T13:26:08.583607583-05:00
+generated: 2019-02-07T13:47:15.908214089-05:00

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: rstudio-volume
+spec:
+  storageClassName: rstudio-data
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: {{ .Values.storage.nfs.size }}
+  nfs:
+    path: {{ .Values.storage.nfs.path }}
+    server: {{ .Values.storage.nfs.server }}
+  persistentVolumeReclaimPolicy: Delete

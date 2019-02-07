@@ -1,0 +1,5 @@
+# RStudio helm chart
+
+## Go to branch `gh-pages` for the chart code
+
+This chart deploys an RStudio server also creates a Persistent volume backed by NFS

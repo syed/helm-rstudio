@@ -4,4 +4,4 @@
 
 This chart deploys an RStudio server also creates a Persistent volume backed by NFS
 
-Add the repo `http://syed.github.io/helm-rstudio` to helm and deploy `rstudio`
+Add the repo `https://syed.github.io/helm-rstudio` to helm and deploy `rstudio`

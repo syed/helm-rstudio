@@ -24,8 +24,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-            - name: PASSWORD
-              value: {{ .Values.auth.password }}
+            - name: DISABLE_AUTH
+              value: true
           ports:
             - name: http
               containerPort: 8787

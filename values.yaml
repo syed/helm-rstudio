@@ -32,11 +32,12 @@ ingress:
 
 storage:
   localMountPath: /home/rstudio/data
-  nfs:
-    path: /data
-    server: 10.226.64.163
-    size: 920G
-
+  # nfs:
+  #   path: /data
+  #   server: 10.226.64.163
+  #   size: 920G
+  # extraVolumes: [{"name": "test-vol", "persistentVolumeClaim": { "claimName": "nfs-vol1" }}]
+  # extraVolumeMounts: [{ "name": "test-vol", "mountPath": "/mnt/nfs-vol1"}]
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

@@ -31,9 +31,19 @@ spec:
               containerPort: 8787
               protocol: TCP
           volumeMounts:
+            {{- if .Values.storage.nfs }}
             - name: data-vol
               mountPath: {{ .Values.storage.localMountPath }}
+            {{- end }}
+            {{- if .Values.storage.extraVolumeMounts }}
+            {{- .Values.storage.extraVolumeMounts | toYaml | trimSuffix "\n" | nindent 12 }}
+            {{- end }}
       volumes:
+        {{- if .Values.storage.nfs }}
         - name: data-vol
           persistentVolumeClaim:
             claimName: {{ include "rstudio.fullname" . }}-pvc
+        {{- end }}
+        {{- if .Values.storage.extraVolumes }}
+        {{- .Values.storage.extraVolumes | toYaml | trimSuffix "\n" | nindent 8 }}
+        {{- end }}

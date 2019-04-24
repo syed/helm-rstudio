@@ -1,3 +1,4 @@
+{{- if .Values.storage.nfs -}}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -10,4 +11,4 @@ spec:
     requests:
       storage: {{ .Values.storage.nfs.size }}
   volumeName: {{ include "rstudio.fullname" . }}-volume
-
+{{- end }}
